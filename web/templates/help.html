@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Help — Student Performance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="bg-blob bg-blob-a" aria-hidden="true"></div>
+    <div class="bg-blob bg-blob-b" aria-hidden="true"></div>
+
+    <main class="page page-help">
+      <nav class="page-nav" aria-label="Page">
+        <a class="nav-link" href="/">← Back to predictor</a>
+      </nav>
+
+      <header class="hero">
+        <h1>How this works</h1>
+        <p class="tagline">Decision tree on the Portuguese student performance dataset</p>
+      </header>
+
+      <section class="card help">
+        <h2>What it predicts</h2>
+        <p>
+          The model estimates whether a student <strong>passes</strong> or <strong>fails</strong> based on
+          demographics, family background, habits, and support factors — not on final exam scores shown in the form.
+        </p>
+      </section>
+
+      <section class="card help">
+        <h2>Model</h2>
+        <p>
+          Categorical answers are one-hot encoded; a decision tree with entropy splits and maximum depth 5 is trained
+          on the first 500 shuffled rows and evaluated on the rest, with 5-fold cross-validation reported at startup.
+        </p>
+      </section>
+
+      <section class="card help">
+        <h2>Using the form</h2>
+        <p>
+          Adjust fields or tap a sample profile, then <strong>Predict</strong>. Probabilities show how confidently the
+          tree leans toward pass or fail for that profile.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
